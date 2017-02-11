@@ -1198,13 +1198,19 @@
 	<wx/dialog.h>
 	<wx/gauge.h>
 
-1486798879 source:g:\acm\guisample\hash\hash\hashmain.cpp
+1486810496 source:g:\acm\guisample\hash\hash\hashmain.cpp
 	"HASHMain.h"
 	<wx/msgdlg.h>
 	<wx/filedlg.h>
 	<wx/clipbrd.h>
+	"md5.h"
 	<wx/intl.h>
 	<wx/string.h>
+	<fstream>
+	<iostream>
+	<ostream>
+	<string.h>
+	<wx/datetime.h>
 
 1402761358 c:\wxwidgets-3.0.1\include\wx\msgdlg.h
 	"wx/defs.h"
@@ -1366,19 +1372,20 @@
 
 1402761358 c:\wxwidgets-3.0.1\include\wx\msw\clipbrd.h
 
-1446667740 source:g:\acm\guisample\hash\hash\resource.rc
+1486800316 source:g:\acm\guisample\hash\hash\resource.rc
 	"wx/msw/wx.rc"
 
 1446667740 D
 
-1486728906 source:g:\acm\guisample\hash\hash\md5.cpp
+1486777233 source:g:\acm\guisample\hash\hash\md5.cpp
 	"MD5.h"
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 
-1486728906 g:\acm\guisample\hash\hash\md5.h
+1486777233 g:\acm\guisample\hash\hash\md5.h
 	<string>
+	<fstream>
 
-1486728906  commit
+1486728906 commit
 

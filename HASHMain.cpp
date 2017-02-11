@@ -88,7 +88,7 @@ HASHDialog::HASHDialog(wxWindow* parent,wxWindowID id)
     StaticText2 = new wxStaticText(this, ID_STATICTEXT2, _("Total"), wxPoint(16,312), wxDefaultSize, 0, _T("ID_STATICTEXT2"));
     file = new wxGauge(this, ID_GAUGE1, 100, wxPoint(56,288), wxSize(352,15), 0, wxDefaultValidator, _T("ID_GAUGE1"));
     total = new wxGauge(this, ID_GAUGE2, 100, wxPoint(56,312), wxSize(352,15), 0, wxDefaultValidator, _T("ID_GAUGE2"));
-    TextCtrl1 = new wxTextCtrl(this, ID_TEXTCTRL1, _("Text"), wxPoint(16,16), wxSize(464,208), wxTE_MULTILINE|wxTE_READONLY, wxDefaultValidator, _T("ID_TEXTCTRL1"));
+    TextCtrl1 = new wxTextCtrl(this, ID_TEXTCTRL1, wxEmptyString, wxPoint(16,16), wxSize(464,208), wxTE_MULTILINE|wxTE_READONLY, wxDefaultValidator, _T("ID_TEXTCTRL1"));
     Center();
 
     Connect(ID_BUTTON1,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&HASHDialog::OnbrowseClick);
@@ -120,20 +120,62 @@ void HASHDialog::OnAbout(wxCommandEvent& event)
 void HASHDialog::OnCheckBox1Click(wxCommandEvent& event)
 {
 }
+#include <fstream>
+#include <iostream>
+#include <ostream>
+#include <string.h>
+#include <wx/datetime.h>
+using std::fstream;
+using std::ostream;
 
 void HASHDialog::OnbrowseClick(wxCommandEvent& event)
 {
-    wxString caption = wxT("Choose a file...");
-    wxString wildcard = wxT("any file(*.*)|*.*");
-    wxString defaultDir = wxT("C:\\");
-    wxString defaultFilename = wxEmptyString;
+
+    wxString caption=wxT("Choose a file...");
+    wxString wildcard=wxT("any file(*.*)|*.*");
+    wxString defaultDir=wxT("C:\\");
+    wxString defaultFilename=wxEmptyString;
+    wxString path=wxEmptyString;
+    int size;
+
+    char path_c[255];
     wxFileDialog dialog(this,caption,defaultDir,defaultFilename,wildcard,wxFD_OPEN|wxFD_FILE_MUST_EXIST);
     if(dialog.ShowModal()==wxID_OK)
     {
-        wxString path = dialog.GetPath();
-        int filterIndex = dialog.GetFilterIndex();
-        TextCtrl1->LoadFile(path);
+        path = dialog.GetPath();
+        //int filterIndex = dialog.GetFilterIndex();
+        //TextCtrl1->LoadFile(path);
     }
+
+    string md5_str;
+    string sha1_str;
+
+    if(md5check->GetValue())
+    {
+        CMD5 cmd5;
+        strncpy(path_c,(const char*)path.mb_str(wxConvUTF8),255);
+        ifstream fin(path_c,ios::binary);
+        cmd5.GenerateMD5(fin,size);
+        fin.close();
+        md5_str=cmd5.ToString();
+    }
+
+
+    TextCtrl1->Clear();
+
+    wxDateTime now=wxDateTime::Now();
+    std::streambuf *sbOld = std::cout.rdbuf();
+    std::cout.rdbuf(TextCtrl1);
+    //cout<<path<<"\n"<<now.Format()<<"\n"<<""<<md5_str;
+
+    if(version->GetValue())
+        cout<<"File: "<<path<<"\n"<<"Size: "<<size<<"Byte"<<"\n";
+    if(date->GetValue())
+        cout<<"Modified: "<<now.Format()<<"\n";
+    if(md5check->GetValue())
+        cout<<"MD5: "<<md5_str<<"\n";
+    if(sha1check->GetValue())
+        ;
 
 
 }
@@ -158,6 +200,7 @@ void HASHDialog::OncopyClick(wxCommandEvent& event)
 
 void HASHDialog::OnsaveClick(wxCommandEvent& event)
 {
+
     wxString caption=wxT("Choose a location to save...");
     wxString wildcard=wxT("text file(*.txt)|*.txt");
     wxString defaultDir=wxT("C:\\");

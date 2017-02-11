@@ -1,11 +1,8 @@
-/***************************************************************
- * Name:      MD5.cpp
- * Purpose:   Code MD5 Class
- * Author:    Richard (x7536110@outlook.com)
- * Created:   2017-02-11
- * Copyright: Richard ()
- * License:   GPL v3
- **************************************************************/
+/*
+ *<x7536110@outlool.com>
+ *this program is licensed under the MIT.
+ */
+
 #include "MD5.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -224,11 +221,38 @@ void CMD5::md5_finish( struct md5_context *ctx, uint8 digest[16] )
     PUT_UINT32( ctx->state[3], digest, 12 );
 }
 
-void CMD5::GenerateMD5(unsigned char* buffer,int bufferlen)
+void CMD5::GenerateMD5(unsigned char* buffer,size_t bufferlen)
 {
     struct md5_context context;
     md5_starts (&context);
     md5_update (&context, buffer, bufferlen);
+    md5_finish (&context,(unsigned char*)m_data);
+}
+
+void CMD5::GenerateMD5(const void *input,size_t bufferlen)
+{
+    GenerateMD5((const char*)input,bufferlen);
+}
+
+void CMD5::GenerateMD5(ifstream &in,int &size)
+{
+    struct md5_context context;
+    md5_starts (&context);
+
+    size=0;
+
+    if(!in)
+        return;
+    streamsize length;
+    char buffer[BUFFER_SIZE];
+    while(!in.eof())
+    {
+        in.read(buffer,BUFFER_SIZE);
+        length=in.gcount();
+        size+=length;
+        if(length>0)
+            md5_update (&context,(unsigned char*)buffer, length);
+    }
     md5_finish (&context,(unsigned char*)m_data);
 }
 

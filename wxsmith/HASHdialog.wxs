@@ -71,7 +71,6 @@
 			<size>352,15</size>
 		</object>
 		<object class="wxTextCtrl" name="ID_TEXTCTRL1" variable="TextCtrl1" member="yes">
-			<value>Text</value>
 			<pos>16,16</pos>
 			<size>464,208</size>
 			<style>wxTE_MULTILINE|wxTE_READONLY</style>

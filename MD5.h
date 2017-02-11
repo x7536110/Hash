@@ -1,18 +1,17 @@
-/***************************************************************
- * Name:      MD5.h
- * Purpose:   Defines MD5 Class
- * Author:    Richard (x7536110@outlook.com)
- * Created:   2017-02-11
- * Copyright: Richard ()
- * License:   GPL v3
- **************************************************************/
+/*
+ *<x7536110@outlool.com>
+ *this program is licensed under the MIT.
+ */
 #ifndef MD5_H_INCLUDED
 #define MD5_H_INCLUDED
 
 #define uint8  unsigned char
 #define uint32 unsigned long int
+#define BUFFER_SIZE 1024
 
 #include <string>
+#include <fstream>
+
 
 using namespace std;
 
@@ -31,14 +30,21 @@ private:
 		uint8 buffer[64];
 	};
 
-	void md5_starts( struct md5_context *ctx );
-	void md5_process( struct md5_context *ctx, uint8 data[64] );
-	void md5_update( struct md5_context *ctx, uint8 *input, uint32 length );
-	void md5_finish( struct md5_context *ctx, uint8 digest[16] );
+	void md5_starts(    struct md5_context *ctx                                 );
+	void md5_process(   struct md5_context *ctx, uint8 data[64]                 );
+	void md5_update(    struct md5_context *ctx, uint8 *input, uint32 length    );
+	void md5_finish(    struct md5_context *ctx, uint8 digest[16]               );
+
+
 
 public:
 	//! construct a CMD5 from any buffer
-	void GenerateMD5(unsigned char* buffer,int bufferlen);
+	void GenerateMD5(unsigned char* buffer,size_t bufferlen);
+
+	void GenerateMD5(const void *input,size_t bufferlen);
+
+    //! construct a CMD5 from file
+	void GenerateMD5(ifstream &in,int &size);
 
 	//! construct a CMD5
 	CMD5();
