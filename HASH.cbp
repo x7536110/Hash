@@ -85,6 +85,8 @@
 		<Unit filename="HASHApp.h" />
 		<Unit filename="HASHMain.cpp" />
 		<Unit filename="HASHMain.h" />
+		<Unit filename="MD5.cpp" />
+		<Unit filename="MD5.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>

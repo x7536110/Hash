@@ -11,6 +11,7 @@
 #include <wx/msgdlg.h>
 #include <wx/filedlg.h>
 #include <wx/clipbrd.h>
+#include "md5.h"
 
 //(*InternalHeaders(HASHDialog)
 #include <wx/intl.h>
@@ -68,7 +69,7 @@ END_EVENT_TABLE()
 HASHDialog::HASHDialog(wxWindow* parent,wxWindowID id)
 {
     //(*Initialize(HASHDialog)
-    Create(parent, wxID_ANY, _("MD5&SHA1 Generator - Richard - x7536110@outlook.com"), wxDefaultPosition, wxDefaultSize, wxDEFAULT_DIALOG_STYLE, _T("wxID_ANY"));
+    Create(parent, wxID_ANY, _(" MD5&SHA1 Generator - Richard - x7536110@outlook.com"), wxDefaultPosition, wxDefaultSize, wxDEFAULT_DIALOG_STYLE, _T("wxID_ANY"));
     SetClientSize(wxSize(500,340));
     browse = new wxButton(this, ID_BUTTON1, _("Browse..."), wxPoint(16,248), wxSize(72,24), 0, wxDefaultValidator, _T("ID_BUTTON1"));
     clear = new wxButton(this, ID_BUTTON2, _("Clear"), wxPoint(96,248), wxSize(72,24), 0, wxDefaultValidator, _T("ID_BUTTON2"));
@@ -88,6 +89,7 @@ HASHDialog::HASHDialog(wxWindow* parent,wxWindowID id)
     file = new wxGauge(this, ID_GAUGE1, 100, wxPoint(56,288), wxSize(352,15), 0, wxDefaultValidator, _T("ID_GAUGE1"));
     total = new wxGauge(this, ID_GAUGE2, 100, wxPoint(56,312), wxSize(352,15), 0, wxDefaultValidator, _T("ID_GAUGE2"));
     TextCtrl1 = new wxTextCtrl(this, ID_TEXTCTRL1, _("Text"), wxPoint(16,16), wxSize(464,208), wxTE_MULTILINE|wxTE_READONLY, wxDefaultValidator, _T("ID_TEXTCTRL1"));
+    Center();
 
     Connect(ID_BUTTON1,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&HASHDialog::OnbrowseClick);
     Connect(ID_BUTTON2,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&HASHDialog::OnclearClick);

@@ -1369,3 +1369,18 @@
 1446667740 source:g:\acm\guisample\hash\hash\resource.rc
 	"wx/msw/wx.rc"
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+1486728906 source:g:\acm\guisample\hash\hash\md5.cpp
+	"MD5.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1486728906 g:\acm\guisample\hash\hash\md5.h
+	<string>
+
+>>>>>>> new commit
+>>>>>>> new commit
