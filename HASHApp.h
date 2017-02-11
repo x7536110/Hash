@@ -4,7 +4,7 @@
  * Author:    Richard (x7536110@outlook.com)
  * Created:   2017-02-11
  * Copyright: Richard ()
- * License:
+ * License:   GPL v3
  **************************************************************/
 
 #ifndef HASHAPP_H

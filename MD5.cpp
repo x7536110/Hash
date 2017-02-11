@@ -1,8 +1,11 @@
-/*
- *<x7536110@outlool.com>
- *this program is licensed under the MIT.
- */
-
+/***************************************************************
+ * Name:      MD5.cpp
+ * Purpose:   Code MD5 Class
+ * Author:    Richard (x7536110@outlook.com)
+ * Created:   2017-02-11
+ * Copyright: Richard ()
+ * License:   GPL v3
+ **************************************************************/
 #include "MD5.h"
 #include <stdio.h>
 #include <stdlib.h>

@@ -1,7 +1,11 @@
-/*
- *<x7536110@outlool.com>
- *this program is licensed under the MIT.
- */
+/***************************************************************
+ * Name:      MD5.h
+ * Purpose:   Defines MD5 Class
+ * Author:    Richard (x7536110@outlook.com)
+ * Created:   2017-02-11
+ * Copyright: Richard ()
+ * License:   GPL v3
+ **************************************************************/
 #ifndef MD5_H_INCLUDED
 #define MD5_H_INCLUDED
 

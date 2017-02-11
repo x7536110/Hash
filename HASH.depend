@@ -1187,10 +1187,10 @@
 	"HASHMain.h"
 	<wx/image.h>
 
-1486778124 g:\acm\guisample\hash\hash\hashapp.h
+1486800601 g:\acm\guisample\hash\hash\hashapp.h
 	<wx/app.h>
 
-1486798013 g:\acm\guisample\hash\hash\hashmain.h
+1486800601 g:\acm\guisample\hash\hash\hashmain.h
 	<wx/stattext.h>
 	<wx/textctrl.h>
 	<wx/checkbox.h>
@@ -1369,10 +1369,8 @@
 1446667740 source:g:\acm\guisample\hash\hash\resource.rc
 	"wx/msw/wx.rc"
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
+1446667740 D
+
 1486728906 source:g:\acm\guisample\hash\hash\md5.cpp
 	"MD5.h"
 	<stdio.h>
@@ -1382,5 +1380,5 @@
 1486728906 g:\acm\guisample\hash\hash\md5.h
 	<string>
 
->>>>>>> new commit
->>>>>>> new commit
+1486728906  commit
+
