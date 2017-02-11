@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxDialog" name="HASHDialog">
+		<title>MD5&amp;SHA1 Generator - Richard - x7536110@outlook.com</title>
+		<size>500,340</size>
+		<id_arg>0</id_arg>
+		<object class="wxButton" name="ID_BUTTON1" variable="browse" member="yes">
+			<label>Browse...</label>
+			<pos>16,248</pos>
+			<size>72,24</size>
+			<handler function="OnbrowseClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON2" variable="clear" member="yes">
+			<label>Clear</label>
+			<pos>96,248</pos>
+			<size>72,24</size>
+			<handler function="OnclearClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON3" variable="copy" member="yes">
+			<label>Copy</label>
+			<pos>176,248</pos>
+			<size>72,24</size>
+			<handler function="OncopyClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON4" variable="save" member="yes">
+			<label>Save...</label>
+			<pos>256,248</pos>
+			<size>72,24</size>
+			<handler function="OnsaveClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON5" variable="stop" member="yes">
+			<label>Stop</label>
+			<pos>336,248</pos>
+			<size>72,24</size>
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX1" variable="version" member="yes">
+			<label>Version</label>
+			<checked>1</checked>
+			<pos>424,240</pos>
+			<handler function="OnCheckBox1Click" entry="EVT_CHECKBOX" />
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX2" variable="date" member="yes">
+			<label>Date</label>
+			<checked>1</checked>
+			<pos>424,264</pos>
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX3" variable="md5check" member="yes">
+			<label>MD5</label>
+			<checked>1</checked>
+			<pos>424,288</pos>
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX4" variable="sha1check" member="yes">
+			<label>SHA1</label>
+			<pos>424,312</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT1" variable="StaticText1" member="yes">
+			<label>File</label>
+			<pos>16,288</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT2" variable="StaticText2" member="yes">
+			<label>Total</label>
+			<pos>16,312</pos>
+		</object>
+		<object class="wxGauge" name="ID_GAUGE1" variable="file" member="yes">
+			<pos>56,288</pos>
+			<size>352,15</size>
+		</object>
+		<object class="wxGauge" name="ID_GAUGE2" variable="total" member="yes">
+			<pos>56,312</pos>
+			<size>352,15</size>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL1" variable="TextCtrl1" member="yes">
+			<value>Text</value>
+			<pos>16,16</pos>
+			<size>464,208</size>
+			<style>wxTE_MULTILINE|wxTE_READONLY</style>
+			<handler function="OnTextCtrl1Text" entry="EVT_TEXT" />
+		</object>
+	</object>
+</wxsmith>
