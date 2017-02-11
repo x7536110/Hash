@@ -1182,3 +1182,190 @@
 
 1402761358 c:\wxwidgets-3.0.1\include\wx\msw\gauge.h
 
+1486796486 source:g:\acm\guisample\hash\hash\hashapp.cpp
+	"HASHApp.h"
+	"HASHMain.h"
+	<wx/image.h>
+
+1486778124 g:\acm\guisample\hash\hash\hashapp.h
+	<wx/app.h>
+
+1486798013 g:\acm\guisample\hash\hash\hashmain.h
+	<wx/stattext.h>
+	<wx/textctrl.h>
+	<wx/checkbox.h>
+	<wx/button.h>
+	<wx/dialog.h>
+	<wx/gauge.h>
+
+1486798879 source:g:\acm\guisample\hash\hash\hashmain.cpp
+	"HASHMain.h"
+	<wx/msgdlg.h>
+	<wx/filedlg.h>
+	<wx/clipbrd.h>
+	<wx/intl.h>
+	<wx/string.h>
+
+1402761358 c:\wxwidgets-3.0.1\include\wx\msgdlg.h
+	"wx/defs.h"
+	"wx/dialog.h"
+	"wx/stockitem.h"
+	"wx/generic/msgdlgg.h"
+	"wx/cocoa/msgdlg.h"
+	"wx/msw/msgdlg.h"
+	"wx/motif/msgdlg.h"
+	"wx/gtk/msgdlg.h"
+	"wx/osx/msgdlg.h"
+	"wx/os2/msgdlg.h"
+
+1402761358 c:\wxwidgets-3.0.1\include\wx\stockitem.h
+	"wx/defs.h"
+	"wx/chartype.h"
+	"wx/string.h"
+	"wx/accel.h"
+
+1402761358 c:\wxwidgets-3.0.1\include\wx\generic\msgdlgg.h
+
+1402761358 c:\wxwidgets-3.0.1\include\wx\msw\msgdlg.h
+
+1402761358 c:\wxwidgets-3.0.1\include\wx\filedlg.h
+	"wx/defs.h"
+	"wx/dialog.h"
+	"wx/arrstr.h"
+	"wx/generic/filedlgg.h"
+	"wx/msw/filedlg.h"
+	"wx/motif/filedlg.h"
+	"wx/gtk/filedlg.h"
+	"wx/gtk1/filedlg.h"
+	"wx/osx/filedlg.h"
+	"wx/cocoa/filedlg.h"
+	"wx/os2/filedlg.h"
+
+1402761358 c:\wxwidgets-3.0.1\include\wx\generic\filedlgg.h
+	"wx/listctrl.h"
+	"wx/datetime.h"
+	"wx/filefn.h"
+	"wx/artprov.h"
+	"wx/filedlg.h"
+	"wx/generic/filectrlg.h"
+
+1402761358 c:\wxwidgets-3.0.1\include\wx\listctrl.h
+	"wx/defs.h"
+	"wx/listbase.h"
+	"wx/msw/listctrl.h"
+	"wx/osx/listctrl.h"
+	"wx/generic/listctrl.h"
+
+1402761358 c:\wxwidgets-3.0.1\include\wx\listbase.h
+	"wx/colour.h"
+	"wx/font.h"
+	"wx/gdicmn.h"
+	"wx/event.h"
+	"wx/control.h"
+
+1402761358 c:\wxwidgets-3.0.1\include\wx\msw\listctrl.h
+	"wx/textctrl.h"
+	"wx/dynarray.h"
+	"wx/vector.h"
+
+1402761358 c:\wxwidgets-3.0.1\include\wx\generic\listctrl.h
+	"wx/containr.h"
+	"wx/scrolwin.h"
+	"wx/textctrl.h"
+
+1402761358 c:\wxwidgets-3.0.1\include\wx\artprov.h
+	"wx/string.h"
+	"wx/bitmap.h"
+	"wx/icon.h"
+	"wx/iconbndl.h"
+
+1402761358 c:\wxwidgets-3.0.1\include\wx\generic\filectrlg.h
+	"wx/containr.h"
+	"wx/listctrl.h"
+	"wx/filectrl.h"
+	"wx/filename.h"
+
+1402761358 c:\wxwidgets-3.0.1\include\wx\filectrl.h
+	"wx/defs.h"
+	"wx/string.h"
+	"wx/event.h"
+	"wx/gtk/filectrl.h"
+	"wx/generic/filectrlg.h"
+
+1402761358 c:\wxwidgets-3.0.1\include\wx\filename.h
+	"wx/arrstr.h"
+	"wx/filefn.h"
+	"wx/datetime.h"
+	"wx/intl.h"
+	"wx/longlong.h"
+	"wx/file.h"
+
+1402761358 c:\wxwidgets-3.0.1\include\wx\file.h
+	"wx/defs.h"
+	"wx/string.h"
+	"wx/filefn.h"
+	"wx/convauto.h"
+
+1402761358 c:\wxwidgets-3.0.1\include\wx\convauto.h
+	"wx/strconv.h"
+	"wx/fontenc.h"
+
+1402761358 c:\wxwidgets-3.0.1\include\wx\msw\filedlg.h
+
+1402761358 c:\wxwidgets-3.0.1\include\wx\clipbrd.h
+	"wx/defs.h"
+	"wx/event.h"
+	"wx/chartype.h"
+	"wx/dataobj.h"
+	"wx/vector.h"
+	"wx/msw/clipbrd.h"
+	"wx/motif/clipbrd.h"
+	"wx/gtk/clipbrd.h"
+	"wx/gtk1/clipbrd.h"
+	"wx/x11/clipbrd.h"
+	"wx/osx/clipbrd.h"
+	"wx/cocoa/clipbrd.h"
+	"wx/os2/clipbrd.h"
+
+1402761358 c:\wxwidgets-3.0.1\include\wx\dataobj.h
+	"wx/defs.h"
+	"wx/string.h"
+	"wx/bitmap.h"
+	"wx/list.h"
+	"wx/arrstr.h"
+	"wx/msw/ole/dataform.h"
+	"wx/motif/dataform.h"
+	"wx/gtk/dataform.h"
+	"wx/gtk1/dataform.h"
+	"wx/x11/dataform.h"
+	"wx/osx/dataform.h"
+	"wx/cocoa/dataform.h"
+	"wx/os2/dataform.h"
+	"wx/msw/ole/dataobj.h"
+	"wx/motif/dataobj.h"
+	"wx/x11/dataobj.h"
+	"wx/gtk/dataobj.h"
+	"wx/gtk1/dataobj.h"
+	"wx/osx/dataobj.h"
+	"wx/cocoa/dataobj.h"
+	"wx/os2/dataobj.h"
+	"wx/msw/ole/dataobj2.h"
+	"wx/gtk/dataobj2.h"
+	"wx/gtk1/dataobj2.h"
+	"wx/x11/dataobj2.h"
+	"wx/motif/dataobj2.h"
+	"wx/osx/dataobj2.h"
+	"wx/cocoa/dataobj2.h"
+	"wx/os2/dataobj2.h"
+
+1402761358 c:\wxwidgets-3.0.1\include\wx\msw\ole\dataform.h
+
+1402761358 c:\wxwidgets-3.0.1\include\wx\msw\ole\dataobj.h
+
+1402761358 c:\wxwidgets-3.0.1\include\wx\msw\ole\dataobj2.h
+
+1402761358 c:\wxwidgets-3.0.1\include\wx\msw\clipbrd.h
+
+1446667740 source:g:\acm\guisample\hash\hash\resource.rc
+	"wx/msw/wx.rc"
+

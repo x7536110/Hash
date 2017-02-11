@@ -136,6 +136,7 @@ void HASHDialog::OnbrowseClick(wxCommandEvent& event)
 
 }
 
+
 void HASHDialog::OnTextCtrl1Text(wxCommandEvent& event)
 {
 
