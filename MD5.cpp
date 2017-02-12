@@ -234,11 +234,11 @@ void CMD5::GenerateMD5(const void *input,size_t bufferlen)
     GenerateMD5((const char*)input,bufferlen);
 }
 
-void CMD5::GenerateMD5(ifstream &in,int &size)
+void CMD5::GenerateMD5(ifstream &in,int64_t &size,int &gauge_now,const int64_t filesize,wxGauge &gauge)
 {
     struct md5_context context;
     md5_starts (&context);
-
+    int cur=0;
     size=0;
 
     if(!in)
@@ -249,7 +249,14 @@ void CMD5::GenerateMD5(ifstream &in,int &size)
     {
         in.read(buffer,BUFFER_SIZE);
         length=in.gcount();
+        cur++;
         size+=length;
+        gauge_now=size*100/filesize;
+        if(cur==200)
+        {
+            gauge.SetValue(gauge_now);
+            cur=0;
+        }
         if(length>0)
             md5_update (&context,(unsigned char*)buffer, length);
     }

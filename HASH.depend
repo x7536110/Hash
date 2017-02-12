@@ -1182,15 +1182,15 @@
 
 1402761358 c:\wxwidgets-3.0.1\include\wx\msw\gauge.h
 
-1486796486 source:g:\acm\guisample\hash\hash\hashapp.cpp
+1486859170 source:g:\acm\guisample\hash\hash\hashapp.cpp
 	"HASHApp.h"
 	"HASHMain.h"
 	<wx/image.h>
 
-1486800601 g:\acm\guisample\hash\hash\hashapp.h
+1486859170 g:\acm\guisample\hash\hash\hashapp.h
 	<wx/app.h>
 
-1486800601 g:\acm\guisample\hash\hash\hashmain.h
+1486861256 g:\acm\guisample\hash\hash\hashmain.h
 	<wx/stattext.h>
 	<wx/textctrl.h>
 	<wx/checkbox.h>
@@ -1198,12 +1198,14 @@
 	<wx/dialog.h>
 	<wx/gauge.h>
 
-1486810496 source:g:\acm\guisample\hash\hash\hashmain.cpp
+1486861723 source:g:\acm\guisample\hash\hash\hashmain.cpp
 	"HASHMain.h"
 	<wx/msgdlg.h>
 	<wx/filedlg.h>
 	<wx/clipbrd.h>
+	<wx/file.h>
 	"md5.h"
+	"SHA1.h"
 	<wx/intl.h>
 	<wx/string.h>
 	<fstream>
@@ -1377,15 +1379,31 @@
 
 1446667740 D
 
-1486777233 source:g:\acm\guisample\hash\hash\md5.cpp
+1486861568 source:g:\acm\guisample\hash\hash\md5.cpp
 	"MD5.h"
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 
-1486777233 g:\acm\guisample\hash\hash\md5.h
+1486861568 g:\acm\guisample\hash\hash\md5.h
 	<string>
 	<fstream>
+	<wx/gauge.h>
 
 1486728906 commit
+
+1402761358 c:\wxwidgets-3.0.1\lib\gcc_lib\mswud\wx\setup.h
+
+1486823091 source:g:\acm\guisample\hash\hash\sha1.cpp
+	"SHA1.h"
+
+1486823091 g:\acm\guisample\hash\hash\sha1.h
+	<memory.h>
+	<limits.h>
+	<stdio.h>
+	<string.h>
+	<string>
+	<stdlib.h>
+	<tchar.h>
+	<tchar.h>
 

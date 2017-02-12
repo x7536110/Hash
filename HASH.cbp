@@ -54,19 +54,18 @@
 			</Target>
 		</Build>
 		<Compiler>
+			<Add option="-Wall" />
 			<Add option="-pipe" />
 			<Add option="-mthreads" />
 			<Add option="-D__GNUWIN32__" />
 			<Add option="-D__WXMSW__" />
 			<Add option="-DwxUSE_UNICODE" />
-			<Add option="-Wall" />
 			<Add directory="C:/wxWidgets-3.0.1/include" />
 		</Compiler>
 		<ResourceCompiler>
 			<Add directory="C:/wxWidgets-3.0.1/include" />
 		</ResourceCompiler>
 		<Linker>
-			<Add option="-mthreads" />
 			<Add library="libkernel32.a" />
 			<Add library="libuser32.a" />
 			<Add library="libgdi32.a" />
@@ -87,6 +86,8 @@
 		<Unit filename="HASHMain.h" />
 		<Unit filename="MD5.cpp" />
 		<Unit filename="MD5.h" />
+		<Unit filename="SHA1.cpp" />
+		<Unit filename="SHA1.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>

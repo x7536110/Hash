@@ -11,13 +11,15 @@
 
 #include <string>
 #include <fstream>
-
+#include <wx/gauge.h>
 
 using namespace std;
 
 /*!
  * Manage MD5.
  */
+
+
 class CMD5
 {
 private:
@@ -44,7 +46,7 @@ public:
 	void GenerateMD5(const void *input,size_t bufferlen);
 
     //! construct a CMD5 from file
-	void GenerateMD5(ifstream &in,int &size);
+	void GenerateMD5(ifstream &in,int64_t &size,int &gauge_now,const int64_t filesize,wxGauge &gauge);
 
 	//! construct a CMD5
 	CMD5();

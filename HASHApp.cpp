@@ -29,6 +29,8 @@ bool HASHApp::OnInit()
     	wxsOK = false;
     }
     //*)
+
     return wxsOK;
 
 }
+

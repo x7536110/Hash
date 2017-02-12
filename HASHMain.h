@@ -37,6 +37,7 @@ class HASHDialog: public wxDialog
         void OnclearClick(wxCommandEvent& event);
         void OncopyClick(wxCommandEvent& event);
         void OnsaveClick(wxCommandEvent& event);
+        void OnInit(wxInitDialogEvent& event);
         //*)
 
         //(*Identifiers(HASHDialog)
@@ -50,22 +51,18 @@ class HASHDialog: public wxDialog
         static const long ID_CHECKBOX3;
         static const long ID_CHECKBOX4;
         static const long ID_STATICTEXT1;
-        static const long ID_STATICTEXT2;
         static const long ID_GAUGE1;
-        static const long ID_GAUGE2;
         static const long ID_TEXTCTRL1;
         //*)
 
         //(*Declarations(HASHDialog)
         wxButton* clear;
-        wxStaticText* StaticText2;
         wxButton* stop;
         wxCheckBox* version;
         wxButton* save;
         wxStaticText* StaticText1;
         wxButton* copy;
         wxButton* browse;
-        wxGauge* total;
         wxCheckBox* sha1check;
         wxCheckBox* date;
         wxCheckBox* md5check;
@@ -74,6 +71,10 @@ class HASHDialog: public wxDialog
         //*)
 
         DECLARE_EVENT_TABLE()
+
+        int gauge_now;
+        int gauge_last;
+        int64_t filesize;
 };
 
 #endif // HASHMAIN_H

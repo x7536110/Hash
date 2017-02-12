@@ -11,7 +11,10 @@
 #include <wx/msgdlg.h>
 #include <wx/filedlg.h>
 #include <wx/clipbrd.h>
+#include <wx/file.h>
 #include "md5.h"
+#include "SHA1.h"
+
 
 //(*InternalHeaders(HASHDialog)
 #include <wx/intl.h>
@@ -55,9 +58,7 @@ const long HASHDialog::ID_CHECKBOX2 = wxNewId();
 const long HASHDialog::ID_CHECKBOX3 = wxNewId();
 const long HASHDialog::ID_CHECKBOX4 = wxNewId();
 const long HASHDialog::ID_STATICTEXT1 = wxNewId();
-const long HASHDialog::ID_STATICTEXT2 = wxNewId();
 const long HASHDialog::ID_GAUGE1 = wxNewId();
-const long HASHDialog::ID_GAUGE2 = wxNewId();
 const long HASHDialog::ID_TEXTCTRL1 = wxNewId();
 //*)
 
@@ -70,24 +71,23 @@ HASHDialog::HASHDialog(wxWindow* parent,wxWindowID id)
 {
     //(*Initialize(HASHDialog)
     Create(parent, wxID_ANY, _(" MD5&SHA1 Generator - Richard - x7536110@outlook.com"), wxDefaultPosition, wxDefaultSize, wxDEFAULT_DIALOG_STYLE, _T("wxID_ANY"));
-    SetClientSize(wxSize(500,340));
+    SetClientSize(wxSize(500,320));
     browse = new wxButton(this, ID_BUTTON1, _("Browse..."), wxPoint(16,248), wxSize(72,24), 0, wxDefaultValidator, _T("ID_BUTTON1"));
     clear = new wxButton(this, ID_BUTTON2, _("Clear"), wxPoint(96,248), wxSize(72,24), 0, wxDefaultValidator, _T("ID_BUTTON2"));
     copy = new wxButton(this, ID_BUTTON3, _("Copy"), wxPoint(176,248), wxSize(72,24), 0, wxDefaultValidator, _T("ID_BUTTON3"));
     save = new wxButton(this, ID_BUTTON4, _("Save..."), wxPoint(256,248), wxSize(72,24), 0, wxDefaultValidator, _T("ID_BUTTON4"));
     stop = new wxButton(this, ID_BUTTON5, _("Stop"), wxPoint(336,248), wxSize(72,24), 0, wxDefaultValidator, _T("ID_BUTTON5"));
+    stop->Disable();
     version = new wxCheckBox(this, ID_CHECKBOX1, _("Version"), wxPoint(424,240), wxDefaultSize, 0, wxDefaultValidator, _T("ID_CHECKBOX1"));
     version->SetValue(true);
-    date = new wxCheckBox(this, ID_CHECKBOX2, _("Date"), wxPoint(424,264), wxDefaultSize, 0, wxDefaultValidator, _T("ID_CHECKBOX2"));
+    date = new wxCheckBox(this, ID_CHECKBOX2, _("Date"), wxPoint(424,260), wxDefaultSize, 0, wxDefaultValidator, _T("ID_CHECKBOX2"));
     date->SetValue(true);
-    md5check = new wxCheckBox(this, ID_CHECKBOX3, _("MD5"), wxPoint(424,288), wxDefaultSize, 0, wxDefaultValidator, _T("ID_CHECKBOX3"));
+    md5check = new wxCheckBox(this, ID_CHECKBOX3, _("MD5"), wxPoint(424,280), wxDefaultSize, 0, wxDefaultValidator, _T("ID_CHECKBOX3"));
     md5check->SetValue(true);
-    sha1check = new wxCheckBox(this, ID_CHECKBOX4, _("SHA1"), wxPoint(424,312), wxDefaultSize, 0, wxDefaultValidator, _T("ID_CHECKBOX4"));
+    sha1check = new wxCheckBox(this, ID_CHECKBOX4, _("SHA1"), wxPoint(424,300), wxDefaultSize, 0, wxDefaultValidator, _T("ID_CHECKBOX4"));
     sha1check->SetValue(false);
     StaticText1 = new wxStaticText(this, ID_STATICTEXT1, _("File"), wxPoint(16,288), wxDefaultSize, 0, _T("ID_STATICTEXT1"));
-    StaticText2 = new wxStaticText(this, ID_STATICTEXT2, _("Total"), wxPoint(16,312), wxDefaultSize, 0, _T("ID_STATICTEXT2"));
     file = new wxGauge(this, ID_GAUGE1, 100, wxPoint(56,288), wxSize(352,15), 0, wxDefaultValidator, _T("ID_GAUGE1"));
-    total = new wxGauge(this, ID_GAUGE2, 100, wxPoint(56,312), wxSize(352,15), 0, wxDefaultValidator, _T("ID_GAUGE2"));
     TextCtrl1 = new wxTextCtrl(this, ID_TEXTCTRL1, wxEmptyString, wxPoint(16,16), wxSize(464,208), wxTE_MULTILINE|wxTE_READONLY, wxDefaultValidator, _T("ID_TEXTCTRL1"));
     Center();
 
@@ -97,7 +97,11 @@ HASHDialog::HASHDialog(wxWindow* parent,wxWindowID id)
     Connect(ID_BUTTON4,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&HASHDialog::OnsaveClick);
     Connect(ID_CHECKBOX1,wxEVT_COMMAND_CHECKBOX_CLICKED,(wxObjectEventFunction)&HASHDialog::OnCheckBox1Click);
     Connect(ID_TEXTCTRL1,wxEVT_COMMAND_TEXT_UPDATED,(wxObjectEventFunction)&HASHDialog::OnTextCtrl1Text);
+    Connect(wxID_ANY,wxEVT_INIT_DIALOG,(wxObjectEventFunction)&HASHDialog::OnInit);
     //*)
+    gauge_last=0;
+    gauge_now=0;
+    filesize=0;
 }
 
 HASHDialog::~HASHDialog()
@@ -136,46 +140,52 @@ void HASHDialog::OnbrowseClick(wxCommandEvent& event)
     wxString defaultDir=wxT("C:\\");
     wxString defaultFilename=wxEmptyString;
     wxString path=wxEmptyString;
-    int size;
+    int64_t size;
 
     char path_c[255];
     wxFileDialog dialog(this,caption,defaultDir,defaultFilename,wildcard,wxFD_OPEN|wxFD_FILE_MUST_EXIST);
     if(dialog.ShowModal()==wxID_OK)
     {
+
         path = dialog.GetPath();
-        //int filterIndex = dialog.GetFilterIndex();
-        //TextCtrl1->LoadFile(path);
+
+        wxFile target(path);
+        filesize=target.Length();
+        target.Close();
+
+        string md5_str;
+        string sha1_str;
+        file->SetValue(0);
+        if(md5check->GetValue())
+        {
+            CMD5 cmd5;
+            strncpy(path_c,(const char*)path.mb_str(wxConvUTF8),255);
+            ifstream fin(path_c,ios::binary);
+            cmd5.GenerateMD5(fin,size,gauge_now,filesize,*file);
+            fin.close();
+            md5_str=cmd5.ToString();
+        }
+
+        TextCtrl1->Clear();
+
+        wxDateTime now=wxDateTime::Now();
+        std::streambuf *sbOld = std::cout.rdbuf();
+        std::cout.rdbuf(TextCtrl1);
+        //cout<<path<<"\n"<<now.Format()<<"\n"<<""<<md5_str;
+        //cout<<gauge_now<<"\n";
+        //cout<<filesize<<"\n";
+        if(version->GetValue())
+            cout<<"File: "<<path<<"\n"<<"Size: "<<size<<"Byte"<<"\n";
+        if(date->GetValue())
+            cout<<"Modified: "<<now.Format()<<"\n";
+        if(md5check->GetValue())
+            cout<<"MD5: "<<md5_str<<"\n";
+        if(sha1check->GetValue())
+            ;
+
+        file->SetValue(0);
+
     }
-
-    string md5_str;
-    string sha1_str;
-
-    if(md5check->GetValue())
-    {
-        CMD5 cmd5;
-        strncpy(path_c,(const char*)path.mb_str(wxConvUTF8),255);
-        ifstream fin(path_c,ios::binary);
-        cmd5.GenerateMD5(fin,size);
-        fin.close();
-        md5_str=cmd5.ToString();
-    }
-
-
-    TextCtrl1->Clear();
-
-    wxDateTime now=wxDateTime::Now();
-    std::streambuf *sbOld = std::cout.rdbuf();
-    std::cout.rdbuf(TextCtrl1);
-    //cout<<path<<"\n"<<now.Format()<<"\n"<<""<<md5_str;
-
-    if(version->GetValue())
-        cout<<"File: "<<path<<"\n"<<"Size: "<<size<<"Byte"<<"\n";
-    if(date->GetValue())
-        cout<<"Modified: "<<now.Format()<<"\n";
-    if(md5check->GetValue())
-        cout<<"MD5: "<<md5_str<<"\n";
-    if(sha1check->GetValue())
-        ;
 
 
 }
@@ -210,4 +220,9 @@ void HASHDialog::OnsaveClick(wxCommandEvent& event)
     {
         TextCtrl1->SaveFile(dialog.GetPath());
     }
+}
+
+void HASHDialog::OnInit(wxInitDialogEvent&)
+{
+
 }
