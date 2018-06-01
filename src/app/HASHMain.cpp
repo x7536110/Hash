@@ -12,8 +12,8 @@
 #include <wx/filedlg.h>
 #include <wx/clipbrd.h>
 #include <wx/file.h>
-#include "md5.h"
-#include "SHA1.h"
+#include "../module/md5.h"
+#include "../module/SHA1.h"
 
 
 //(*InternalHeaders(HASHDialog)

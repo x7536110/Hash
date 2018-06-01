@@ -1407,3 +1407,62 @@
 	<tchar.h>
 	<tchar.h>
 
+1527823926 source:e:\richard\wxprojects\hash\hashapp.cpp
+	"HASHApp.h"
+	"HASHMain.h"
+	<wx/image.h>
+
+1527823926 e:\richard\wxprojects\hash\hashapp.h
+	<wx/app.h>
+
+1527824627 e:\richard\wxprojects\hash\hashmain.h
+	<wx/button.h>
+	<wx/checkbox.h>
+	<wx/dialog.h>
+	<wx/gauge.h>
+	<wx/stattext.h>
+	<wx/textctrl.h>
+
+1527823926 source:e:\richard\wxprojects\hash\hashmain.cpp
+	"HASHMain.h"
+	<wx/msgdlg.h>
+	<wx/filedlg.h>
+	<wx/clipbrd.h>
+	<wx/file.h>
+	"md5.h"
+	"SHA1.h"
+	<wx/intl.h>
+	<wx/string.h>
+	<fstream>
+	<iostream>
+	<ostream>
+	<string.h>
+	<wx/datetime.h>
+
+1527823926 e:\richard\wxprojects\hash\md5.h
+	<string>
+	<fstream>
+	<wx/gauge.h>
+
+1527823926 e:\richard\wxprojects\hash\sha1.h
+	<memory.h>
+	<limits.h>
+	<stdio.h>
+	<string.h>
+	<string>
+	<stdlib.h>
+	<tchar.h>
+	<tchar.h>
+
+1527823926 source:e:\richard\wxprojects\hash\md5.cpp
+	"MD5.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1527823926 source:e:\richard\wxprojects\hash\resource.rc
+	"wx/msw/wx.rc"
+
+1527823926 source:e:\richard\wxprojects\hash\sha1.cpp
+	"SHA1.h"
+

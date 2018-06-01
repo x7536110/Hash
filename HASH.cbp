@@ -80,17 +80,17 @@
 			<Add library="libwsock32.a" />
 			<Add library="libodbc32.a" />
 		</Linker>
-		<Unit filename="HASHApp.cpp" />
-		<Unit filename="HASHApp.h" />
-		<Unit filename="HASHMain.cpp" />
-		<Unit filename="HASHMain.h" />
-		<Unit filename="MD5.cpp" />
-		<Unit filename="MD5.h" />
-		<Unit filename="SHA1.cpp" />
-		<Unit filename="SHA1.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
+		<Unit filename="src/app/HASHApp.cpp" />
+		<Unit filename="src/app/HASHApp.h" />
+		<Unit filename="src/app/HASHMain.cpp" />
+		<Unit filename="src/app/HASHMain.h" />
+		<Unit filename="src/module/MD5.cpp" />
+		<Unit filename="src/module/MD5.h" />
+		<Unit filename="src/module/SHA1.cpp" />
+		<Unit filename="src/module/SHA1.h" />
 		<Unit filename="wxsmith/HASHdialog.wxs" />
 		<Extensions>
 			<code_completion />

@@ -11,12 +11,12 @@
 #define HASHMAIN_H
 
 //(*Headers(HASHDialog)
-#include <wx/stattext.h>
-#include <wx/textctrl.h>
-#include <wx/checkbox.h>
 #include <wx/button.h>
+#include <wx/checkbox.h>
 #include <wx/dialog.h>
 #include <wx/gauge.h>
+#include <wx/stattext.h>
+#include <wx/textctrl.h>
 //*)
 
 class HASHDialog: public wxDialog
@@ -56,18 +56,18 @@ class HASHDialog: public wxDialog
         //*)
 
         //(*Declarations(HASHDialog)
-        wxButton* clear;
-        wxButton* stop;
-        wxCheckBox* version;
-        wxButton* save;
-        wxStaticText* StaticText1;
-        wxButton* copy;
         wxButton* browse;
-        wxCheckBox* sha1check;
+        wxButton* clear;
+        wxButton* copy;
+        wxButton* save;
+        wxButton* stop;
         wxCheckBox* date;
         wxCheckBox* md5check;
-        wxTextCtrl* TextCtrl1;
+        wxCheckBox* sha1check;
+        wxCheckBox* version;
         wxGauge* file;
+        wxStaticText* StaticText1;
+        wxTextCtrl* TextCtrl1;
         //*)
 
         DECLARE_EVENT_TABLE()
