@@ -15,18 +15,57 @@
 				<Compiler>
 					<Add option="-g" />
 					<Add option="-D__WXDEBUG__" />
-					<Add directory="C:/wxWidgets-3.0.1/lib/gcc_lib/mswud" />
+					<Add directory="C:/wxWidgets-3.1.1/lib/gcc_lib/mswud" />
 				</Compiler>
 				<ResourceCompiler>
-					<Add directory="C:/wxWidgets-3.0.1/lib/gcc_lib/mswud" />
+					<Add directory="C:/wxWidgets-3.1.1/lib/gcc_lib/mswud" />
 				</ResourceCompiler>
 				<Linker>
-					<Add library="libwxmsw30ud.a" />
-					<Add library="libwxpngd.a" />
-					<Add library="libwxjpegd.a" />
-					<Add library="libwxtiffd.a" />
-					<Add library="libwxzlibd.a" />
-					<Add directory="C:/wxWidgets-3.0.1/lib/gcc_lib" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxbase31u.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxbase31u_net.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxbase31u_xml.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxbase31ud.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxbase31ud_net.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxbase31ud_xml.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxexpat.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxexpatd.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxjpeg.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxjpegd.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31u_adv.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31u_aui.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31u_core.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31u_gl.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31u_html.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31u_media.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31u_propgrid.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31u_ribbon.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31u_richtext.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31u_stc.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31u_webview.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31u_xrc.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31ud_adv.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31ud_aui.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31ud_core.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31ud_gl.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31ud_html.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31ud_media.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31ud_propgrid.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31ud_ribbon.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31ud_richtext.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31ud_stc.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31ud_webview.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31ud_xrc.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxpng.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxpngd.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxregexu.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxregexud.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxscintilla.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxscintillad.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxtiff.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxtiffd.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxzlib.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxzlibd.a" />
+					<Add directory="C:/wxWidgets-3.1.1/lib/gcc_lib" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -37,19 +76,58 @@
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
 					<Add option="-O2" />
-					<Add directory="C:/wxWidgets-3.0.1/lib/gcc_lib/mswu" />
+					<Add directory="C:/wxWidgets-3.1.1/lib/gcc_lib/mswu" />
 				</Compiler>
 				<ResourceCompiler>
-					<Add directory="C:/wxWidgets-3.0.1/lib/gcc_lib/mswu" />
+					<Add directory="C:/wxWidgets-3.1.1/lib/gcc_lib/mswu" />
 				</ResourceCompiler>
 				<Linker>
 					<Add option="-s" />
-					<Add library="libwxmsw30u.a" />
-					<Add library="libwxpng.a" />
-					<Add library="libwxjpeg.a" />
-					<Add library="libwxtiff.a" />
-					<Add library="libwxzlib.a" />
-					<Add directory="C:/wxWidgets-3.0.1/lib/gcc_lib" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxbase31u.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxbase31u_net.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxbase31u_xml.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxbase31ud.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxbase31ud_net.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxbase31ud_xml.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxexpat.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxexpatd.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxjpeg.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxjpegd.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31u_adv.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31u_aui.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31u_core.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31u_gl.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31u_html.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31u_media.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31u_propgrid.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31u_ribbon.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31u_richtext.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31u_stc.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31u_webview.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31u_xrc.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31ud_adv.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31ud_aui.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31ud_core.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31ud_gl.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31ud_html.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31ud_media.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31ud_propgrid.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31ud_ribbon.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31ud_richtext.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31ud_stc.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31ud_webview.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31ud_xrc.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxpng.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxpngd.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxregexu.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxregexud.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxscintilla.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxscintillad.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxtiff.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxtiffd.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxzlib.a" />
+					<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxzlibd.a" />
+					<Add directory="C:/wxWidgets-3.1.1/lib/gcc_lib" />
 				</Linker>
 			</Target>
 		</Build>
@@ -60,25 +138,56 @@
 			<Add option="-D__GNUWIN32__" />
 			<Add option="-D__WXMSW__" />
 			<Add option="-DwxUSE_UNICODE" />
-			<Add directory="C:/wxWidgets-3.0.1/include" />
+			<Add directory="C:/wxWidgets-3.1.1/include" />
 		</Compiler>
 		<ResourceCompiler>
-			<Add directory="C:/wxWidgets-3.0.1/include" />
+			<Add directory="C:/wxWidgets-3.1.1/include" />
 		</ResourceCompiler>
 		<Linker>
-			<Add library="libkernel32.a" />
-			<Add library="libuser32.a" />
-			<Add library="libgdi32.a" />
-			<Add library="libwinspool.a" />
-			<Add library="libcomdlg32.a" />
-			<Add library="libadvapi32.a" />
-			<Add library="libshell32.a" />
-			<Add library="libole32.a" />
-			<Add library="liboleaut32.a" />
-			<Add library="libuuid.a" />
-			<Add library="libcomctl32.a" />
-			<Add library="libwsock32.a" />
-			<Add library="libodbc32.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxbase31u.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxbase31u_net.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxbase31u_xml.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxbase31ud.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxbase31ud_net.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxbase31ud_xml.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxexpat.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxexpatd.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxjpeg.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxjpegd.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31u_adv.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31u_aui.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31u_core.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31u_gl.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31u_html.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31u_media.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31u_propgrid.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31u_ribbon.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31u_richtext.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31u_stc.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31u_webview.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31u_xrc.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31ud_adv.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31ud_aui.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31ud_core.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31ud_gl.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31ud_html.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31ud_media.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31ud_propgrid.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31ud_ribbon.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31ud_richtext.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31ud_stc.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31ud_webview.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxmsw31ud_xrc.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxpng.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxpngd.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxregexu.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxregexud.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxscintilla.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxscintillad.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxtiff.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxtiffd.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxzlib.a" />
+			<Add library="C:/wxWidgets-3.1.1/lib/gcc_lib/libwxzlibd.a" />
 		</Linker>
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
